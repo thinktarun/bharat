@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Contact Us - Bharat Portal | संपर्क करें</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Noto+Sans+Devanagari:wght@400;600&display=swap');
+body{font-family:'Inter','Noto Sans Devanagari',sans-serif;background:linear-gradient(180deg,#FFFBF0,#FFF7ED);color:#1e293b;margin:0;line-height:1.7}
+.container{max-width:1000px;margin:auto;padding:24px;display:grid;grid-template-columns:1fr 380px;gap:20px}
+@media(max-width:800px){.container{grid-template-columns:1fr}}
+.card{background:rgba(255,255,255,0.96);border:1px solid #FFEAD0;border-radius:24px;padding:28px;box-shadow:0 10px 40px rgba(0,0,0,0.06)}
+input,textarea,select{width:100%;padding:13px 16px;border-radius:12px;border:1.5px solid #FFEAD0;margin:8px 0;font-size:14px;outline:none;background:white}
+input:focus,textarea:focus{border-color:#FF671F}
+.btn{width:100%;background:linear-gradient(135deg,#FF671F,#ea580c);color:white;border:none;padding:14px;border-radius:12px;font-weight:800;cursor:pointer;font-size:15px}
+</style>
+</head>
+<body>
+<div style="max-width:1000px;margin:auto;padding:24px 24px 0"><a href="index.html" style="text-decoration:none;color:#ea580c;font-weight:700">← Home</a></div>
+<div class="container">
+<div class="card">
+<h1 style="font-size:26px;font-weight:900">📞 Contact Us - संपर्क करें</h1>
+<p style="color:#57534e;margin:10px 0 20px">Kisi bhi sarkari yojana, website link ya technical problem ke liye humse sampark karein. Hum 24-48 ghante mein jawab dene ki koshish karte hain.</p>
+
+<form onsubmit="event.preventDefault(); alert('✅ Message Sent! Hum jaldi contact karenge. (Demo - Real mein backend connect karna hai)');">
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+<input placeholder="आपका नाम *" required>
+<input placeholder="Email *" type="email" required>
+</div>
+<input placeholder="Mobile Number (Optional)">
+<select><option>Query Type Chunein</option><option>Yojana ki Jankari</option><option>Website Link Galat Hai</option><option>Nayi Yojana Add Karwani Hai</option><option>AdSense / Business</option><option>Technical Problem</option></select>
+<textarea rows="5" placeholder="अपना संदेश लिखें... Kaunsi yojana ke baare mein jankari chahiye?" required></textarea>
+<button type="submit" class="btn">📨 Message Bhejein</button>
+</form>
+
+<div style="margin-top:20px;padding:16px;background:#FFFBEB;border-radius:14px;border:1px solid #FFEAD0;font-size:13px">
+<b>💡 Jaldi Jawab Chahiye?</b> Direct Email karein: <b>support@bharatportal.com</b> - Subject mein Yojana ka naam likhein.
+</div>
+</div>
+
+<div>
+<div class="card">
+<h3 style="font-weight:800">📍 Contact Info</h3>
+<div style="margin-top:14px;font-size:14px;line-height:1.8">
+<p>📧 <b>Email:</b><br>support@bharatportal.com<br>help@bharatportal.com</p>
+<p>🌐 <b>Website:</b><br>www.bharatportal.com</p>
+<p>📍 <b>Address:</b><br>Bharat Portal Office<br>Lucknow, Uttar Pradesh<br>India - 226001</p>
+<p>🕒 <b>Working Hours:</b><br>Mon - Sat: 9 AM - 6 PM IST</p>
+</div>
+</div>
+
+<div class="card" style="margin-top:16px;background:linear-gradient(135deg,#0f172a,#1e293b);color:white;border:none">
+<h3 style="color:white">⚠️ Important Note</h3>
+<p style="font-size:13px;color:#cbd5e1;margin-top:10px">Hum koi sarkari office nahi hain. Hum paise nahi maangte, na hi koi form bharwate hain. Saare official links .gov.in par le jaate hain. Koi bhi vyakti agar Bharat Portal ke naam par paise maange to turant hume report karein.</p>
+</div>
+
+<div class="card" style="margin-top:16px;text-align:center">
+<div style="font-size:32px">🗺️</div>
+<div style="font-weight:700;margin-top:8px">Lucknow, UP</div>
+<div style="font-size:12px;color:#78716c">Bharat Portal HQ</div>
+</div>
+</div>
+</div>
+</body>
+</html>

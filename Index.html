@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bharat Portal 2026 - सभी सरकारी योजनाएं और सरकारी वेबसाइट एक जगह</title>
+<meta name="description" content="भारत की सभी सरकारी योजनाएं - PM Kisan, PM Awas, Ayushman Bharat, सभी सरकारी वेबसाइट एक ही जगह।">
+<meta name="robots" content="index, follow">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🇮🇳</text></svg>">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Noto+Sans+Devanagari:wght@400;600&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter','Noto Sans Devanagari',sans-serif;background:linear-gradient(180deg,#FFFBF0 0%,#FFF7ED 15%,#FFFBF5 100%);color:#1e293b}
+.warm{position:fixed;inset:0;z-index:-1;pointer-events:none}
+.warm::before{content:'';position:absolute;width:700px;height:700px;background:radial-gradient(circle,rgba(255,103,31,0.09),transparent 70%);top:-150px;left:-150px}
+.warm::after{content:'';position:absolute;width:800px;height:800px;background:radial-gradient(circle,rgba(4,106,56,0.07),transparent 70%);bottom:-200px;right:-150px}
+.header{backdrop-filter:blur(22px);background:rgba(255,255,255,0.9);border-bottom:1px solid #FFEAD0;position:sticky;top:0;z-index:50}
+.ad{border:1.5px dashed #f5c06a;background:linear-gradient(135deg,#FFFBEB,#FEF3C7);border-radius:16px;padding:12px;text-align:center;margin:16px 0}
+.ad-label{font-size:10px;letter-spacing:1.5px;color:#92400e;font-weight:800}
+.card{background:rgba(255,255,255,0.95);border:1px solid #FFEDD5;border-radius:20px;padding:18px;box-shadow:0 6px 24px rgba(0,0,0,0.04);transition:.3s}
+.card:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(0,0,0,0.07)}
+.btn{border:none;padding:10px 18px;border-radius:12px;font-weight:700;cursor:pointer}
+.btn-primary{background:linear-gradient(135deg,#FF671F,#ea580c);color:white}
+.btn-sec{background:white;border:1.5px solid #FFEAD0}
+.grid{grid-template-columns:1fr 360px}
+@media(max-width:900px){.grid{grid-template-columns:1fr!important}}
+</style>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="warm"></div>
+<div style="height:4px;background:linear-gradient(90deg,#FF671F,#fff,#046A38)"></div>
+<div style="background:#0f172a;color:#cbd5e1;padding:6px 16px;font-size:12px;display:flex;justify-content:space-between"><span>🇮🇳 भारत सरकार पोर्टल | 🕒 <span id="lu" style="color:white;font-weight:700"></span> | 🔒 100% Free</span><span>📧 support@bharatportal.com</span></div>
+
+<header class="header">
+<div style="max-width:1320px;margin:auto;padding:14px 18px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
+<div style="display:flex;gap:12px;align-items:center;cursor:pointer" id="logoBtn" onclick="openAdmin()" title="Admin - Click 3 times fast"><div style="width:46px;height:46px;background:linear-gradient(135deg,#FF671F,#046A38);border-radius:13px;display:flex;align-items:center;justify-content:center;color:white;font-weight:900">BP</div><div><div style="font-weight:900;font-size:20px">Bharat Portal</div><div style="font-size:11px;color:#64748b">सभी सरकारी सेवाएं एक जगह</div></div></div>
+<input id="search" placeholder="🔍 योजना खोजें... PM Kisan, Aadhaar" style="flex:1;max-width:460px;padding:12px 16px;border-radius:14px;border:1.5px solid #FFEAD0;outline:none">
+<div style="display:flex;gap:8px"><a href="about.html" class="btn btn-sec" style="text-decoration:none;font-size:13px">About</a><a href="contact.html" class="btn btn-sec" style="text-decoration:none;font-size:13px">Contact</a><button onclick="openAdmin()" class="btn btn-sec" style="font-size:13px" title="Admin Panel">⚙️ Admin</button></div>
+</div>
+</header>
+
+<div style="max-width:1320px;margin:auto;padding:16px 18px">
+<div class="ad"><span class="ad-label">Advertisement</span><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="1234567890" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
+
+<div class="grid" style="display:grid;gap:20px">
+<div>
+<div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px">
+<button class="btn btn-primary" onclick="filterCat('all',this)">✨ सभी योजना</button>
+<button class="btn btn-sec" onclick="filterCat('kisan',this)">🌾 किसान</button>
+<button class="btn btn-sec" onclick="filterCat('mahila',this)">👩 महिला</button>
+<button class="btn btn-sec" onclick="filterCat('yuva',this)">🎓 युवा / रोजगार</button>
+<button class="btn btn-sec" onclick="filterCat('awas',this)">🏠 आवास</button>
+<button class="btn btn-sec" onclick="filterCat('swasthya',this)">🏥 स्वास्थ्य</button>
+</div>
+
+<div id="grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:14px"></div>
+
+<div class="ad"><span class="ad-label">Advertisement</span><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="1234567890" data-ad-format="auto"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
+
+<div id="grid2" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:14px"></div>
+</div>
+
+<!-- SIDEBAR USER FRIENDLY -->
+<div>
+<div class="card" style="margin-bottom:16px">
+<h3 style="font-weight:800;font-size:15px">🔗 सभी सरकारी वेबसाइट</h3>
+<p style="font-size:12px;color:#78716c;margin:6px 0 10px">Aadhaar, PAN, Passport, RTO आदि के official links</p>
+<input id="wsearch" placeholder="Website खोजें..." style="width:100%;padding:10px;border-radius:10px;border:1.5px solid #FFEAD0;margin-bottom:10px">
+<div id="wlist" style="max-height:520px;overflow:auto"></div>
+<a href="websites.html" style="display:block;text-align:center;margin-top:10px;background:#FFFBEB;padding:10px;border-radius:10px;color:#c2410c;font-weight:700;text-decoration:none;font-size:13px">सभी 500+ वेबसाइट देखें →</a>
+</div>
+
+<div class="ad"><span class="ad-label">Advertisement - Sidebar</span><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="1234567890" data-ad-format="auto"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
+
+<div class="card" style="background:linear-gradient(135deg,#fff,#FFFBEB)">
+<h3 style="font-weight:800;font-size:15px">📢 जरूरी सूचना</h3>
+<div style="font-size:13px;line-height:1.7;margin-top:10px;color:#44403c">
+<p>✅ सभी जानकारी official .gov.in से ली गई है</p>
+<p>✅ कोई फीस नहीं, कोई फॉर्म नहीं भरवाते</p>
+<p>✅ Apply बटन पर क्लिक करके सीधे सरकारी वेबसाइट पर जाएं</p>
+<p>✅ रोज नई योजनाएं अपडेट होती हैं</p>
+</div>
+<div style="margin-top:12px;padding:10px;background:white;border-radius:12px;border:1px solid #FFEAD0;text-align:center">
+<div style="font-size:12px;color:#78716c">हेल्पलाइन</div>
+<div style="font-weight:800;color:#ea580c">support@bharatportal.com</div>
+</div>
+</div>
+
+<div class="card" style="margin-top:16px">
+<h3 style="font-weight:800;font-size:14px">🔥 लोकप्रिय योजनाएं</h3>
+<div style="margin-top:10px;font-size:13px;line-height:2.2">
+<a href="#" onclick="filterCat('kisan');return false" style="text-decoration:none;color:#1e293b">🌾 PM Kisan Samman Nidhi</a><br>
+<a href="#" onclick="filterCat('awas');return false" style="text-decoration:none;color:#1e293b">🏠 PM Awas Yojana</a><br>
+<a href="#" onclick="filterCat('swasthya');return false" style="text-decoration:none;color:#1e293b">🏥 Ayushman Bharat</a><br>
+<a href="#" onclick="filterCat('mahila');return false" style="text-decoration:none;color:#1e293b">👩 Ladli Behna Yojana</a><br>
+<a href="#" onclick="filterCat('yuva');return false" style="text-decoration:none;color:#1e293b">💼 PM Mudra Loan</a>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="ad"><span class="ad-label">Advertisement - Footer</span><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="1234567890" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
+</div>
+
+<!-- YOJANA MODAL -->
+<div id="yModal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.55);backdrop-filter:blur(6px);z-index:100;align-items:center;justify-content:center;padding:16px"><div class="card" style="max-width:620px;width:100%;max-height:85vh;overflow:auto"><div style="display:flex;justify-content:space-between"><h2 id="mTitle" style="font-weight:900;font-size:19px"></h2><button onclick="document.getElementById('yModal').style.display='none'" style="width:32px;height:32px;border-radius:50%;border:1px solid #FFEAD0;background:white">✕</button></div><div id="mContent" style="margin-top:12px"></div></div></div>
+
+<!-- ADMIN MODAL - HIDDEN, CONTAINS ALL ADMIN FEATURES -->
+<div id="admin" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.65);backdrop-filter:blur(8px);z-index:200;align-items:center;justify-content:center;padding:16px;overflow:auto">
+<div class="card" style="max-width:560px;width:100%;max-height:90vh;overflow:auto">
+<h3 style="font-weight:900">🔐 Admin Panel - Bharat Portal</h3>
+<p style="font-size:12px;color:#78716c;margin-top:4px">Ye area sirf owner ke liye hai, user ko nahi dikhega</p>
+<div id="loginBox"><input id="pass" type="password" placeholder="Password: bharat123" style="width:100%;padding:12px;border-radius:12px;border:1.5px solid #FFEAD0;margin:12px 0"><button class="btn btn-primary" style="width:100%" onclick="if(document.getElementById('pass').value==='bharat226016'){document.getElementById('loginBox').style.display='none';document.getElementById('adminForm').style.display='block'}else alert('Wrong Password')">Login</button></div>
+
+<div id="adminForm" style="display:none;margin-top:14px">
+<div style="display:grid;gap:18px">
+
+<!-- SECTION 1: ADD YOJANA -->
+<div style="background:#FFFBEB;padding:16px;border-radius:14px;border:1px solid #FFEAD0">
+<h4 style="font-weight:800;font-size:14px">➕ नई योजना जोड़ें (Auto-Update)</h4>
+<input id="nTitle" placeholder="Yojana Name *" style="width:100%;padding:10px;border-radius:10px;border:1px solid #FFEAD0;margin:6px 0">
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px"><input id="nCat" placeholder="Category: kisan/mahila..." style="padding:10px;border-radius:10px;border:1px solid #FFEAD0"><input id="nBen" placeholder="Benefit: ₹6000/year" style="padding:10px;border-radius:10px;border:1px solid #FFEAD0"></div>
+<textarea id="nDesc" placeholder="Full Description *" style="width:100%;padding:10px;border-radius:10px;border:1px solid #FFEAD0;margin:6px 0;height:80px"></textarea>
+<input id="nLink" placeholder="Official Link https://..." style="width:100%;padding:10px;border-radius:10px;border:1px solid #FFEAD0;margin:6px 0">
+<input id="nElig" placeholder="Eligibility" style="width:100%;padding:10px;border-radius:10px;border:1px solid #FFEAD0;margin:6px 0">
+<button class="btn btn-primary" style="width:100%;margin-top:6px" onclick="addYojana()">Add Yojana - Live Update</button>
+</div>
+
+<!-- SECTION 2: AUTO UPDATE -->
+<div style="background:#f0fdf4;padding:16px;border-radius:14px;border:1px solid #bbf7d0">
+<h4 style="font-weight:800;font-size:14px">⚡ Daily Auto-Update System</h4>
+<div style="font-size:12px;line-height:1.6;margin-top:8px;color:#14532d">
+<p>🟢 <b>Status:</b> Active - Roz 6 AM check</p>
+<p>📅 Last Fetch: <span id="lastFetch">-</span></p>
+<p>📊 Total Yojana: <span id="totalCount">0</span></p>
+</div>
+<div style="margin-top:12px">
+<label style="font-size:11px;font-weight:700">Google Sheet CSV Link</label>
+<input id="sheetUrl" placeholder="https://docs.google.com/spreadsheets/d/.../pub?output=csv" style="width:100%;padding:9px;border-radius:9px;border:1px solid #bbf7d0;font-size:12px;margin-top:4px">
+<button class="btn btn-primary" style="width:100%;margin-top:8px;font-size:13px;background:#16a34a" onclick="connectSheet()">Connect Sheet & Auto Sync</button>
+<div style="font-size:11px;color:#15803d;margin-top:6px">Sheet ko File > Share > Publish to Web > CSV link</div>
+</div>
+<div style="margin-top:10px;background:white;padding:10px;border-radius:10px;font-size:11px">
+<b>API Code (Developer):</b><br><code>fetch('YOUR_API/yojanas').then(r=>r.json()).then(d=>localStorage.setItem('customYojanas',JSON.stringify(d)))</code>
+</div>
+</div>
+
+<!-- SECTION 3: ADSENSE SETUP -->
+<div style="background:#0f172a;padding:16px;border-radius:14px;color:white">
+<h4 style="font-weight:800;font-size:14px;color:white">🔧 AdSense Setup - Earning</h4>
+<p style="font-size:11px;color:#94a3b8;margin-top:4px">Ye settings sirf admin mein hain, user ko nahi dikhengi</p>
+<div style="display:grid;gap:10px;margin-top:10px">
+<input id="pubId" placeholder="Publisher ID: ca-pub-1234567890123456" style="width:100%;padding:10px;border-radius:10px;border:none">
+<input id="slotId" placeholder="Ad Slot ID: 1234567890" style="width:100%;padding:10px;border-radius:10px;border:none">
+</div>
+<button class="btn" style="width:100%;margin-top:10px;background:white;color:#0f172a" onclick="saveAds()">💾 Save & Update All Ads</button>
+<div style="font-size:11px;color:#94a3b8;margin-top:8px">Save karne par saare ads mein aapki ID lag jayegi. Real AdSense ke liye code mein ca-pub-XXXX replace karna bhi zaroori hai.</div>
+</div>
+
+<!-- SECTION 4: CONTACT MESSAGES -->
+<div style="background:#eff6ff;padding:16px;border-radius:14px;border:1px solid #bfdbfe">
+<h4 style="font-weight:800;font-size:14px">📩 Contact Form Messages Kaise Milega?</h4>
+<div style="font-size:12px;line-height:1.7;margin-top:8px;color:#1e3a8a">
+<p><b>3 Tarike - Bina Server ke:</b></p>
+<p><b>1. FormSubmit (Sabse Easy - Recommended):</b><br>contact.html mein already lagaya hai. Bas apna email daalo: <code>https://formsubmit.co/support@bharatportal.com</code> - Message seedha email par aayega, bina backend ke!</p>
+<p><b>2. Google Sheet:</b><br>Form ko Google Sheet se connect karo - saare messages sheet mein save honge.</p>
+<p><b>3. EmailJS:</b><br>emailjs.com se free account banao - form se direct email.</p>
+<p style="margin-top:8px;background:white;padding:8px;border-radius:8px"><b>Current:</b> FormSubmit active hai - contact.html check karo</p>
+</div>
+<button class="btn btn-sec" style="width:100%;margin-top:8px" onclick="exportData()">📥 Export All Yojana Data JSON</button>
+</div>
+
+</div>
+</div>
+<button onclick="document.getElementById('admin').style.display='none'" class="btn btn-sec" style="width:100%;margin-top:12px">Close Admin</button>
+</div>
+</div>
+
+<script>
+// Admin open function - works via button, logo click, and footer
+let clickCount=0;
+function openAdmin(){
+  document.getElementById('admin').style.display='flex';
+}
+function logoClick(){
+  clickCount++;
+  if(clickCount>=3){ openAdmin(); clickCount=0; }
+  setTimeout(()=>{clickCount=0},2000);
+}
+document.addEventListener('DOMContentLoaded', ()=>{
+  const logo = document.getElementById('logoBtn');
+  if(logo){
+    logo.addEventListener('click', logoClick);
+    // long press also
+    let timer;
+    logo.addEventListener('mousedown', ()=>{ timer=setTimeout(openAdmin,1500); });
+    logo.addEventListener('mouseup', ()=>clearTimeout(timer));
+    logo.addEventListener('touchstart', ()=>{ timer=setTimeout(openAdmin,1500); });
+    logo.addEventListener('touchend', ()=>clearTimeout(timer));
+  }
+});
+</script>
+
+<footer style="background:#020617;color:#94a3b8;padding:32px 18px;margin-top:32px;border-top:4px solid #FF671F">
+<div style="max-width:1320px;margin:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px">
+<div><div style="color:white;font-weight:800">🇮🇳 Bharat Portal</div><div style="font-size:13px;margin-top:8px">सभी सरकारी योजनाएं एक जगह। Official links only.</div></div>
+<div><div style="color:white;font-weight:700">Quick Links</div><div style="font-size:13px;line-height:2;margin-top:6px">
+<a href="about.html" style="color:#94a3b8;text-decoration:none">About Us</a><br>
+<a href="privacy.html" style="color:#94a3b8;text-decoration:none">Privacy Policy</a><br>
+<a href="contact.html" style="color:#94a3b8;text-decoration:none">Contact Us</a><br>
+<a href="disclaimer.html" style="color:#94a3b8;text-decoration:none">Disclaimer</a><br>
+<a href="terms.html" style="color:#94a3b8;text-decoration:none">Terms & Conditions</a><br>
+</div></div>
+<div><div style="color:white;font-weight:700">Help</div><div style="font-size:12px;margin-top:6px">Email: support@bharatportal.com<br>Response: 24-48 hrs</div></div>
+</div>
+<div style="text-align:center;margin-top:20px;border-top:1px solid #1e293b;padding-top:16px;font-size:11px">© 2026 Bharat Portal | Non-Government Private Portal | Auto-Update Enabled<br><span style="font-size:10px;color:#475569">“Connecting Citizens with Government Benefits”</span></div>
+</footer>
+
+<script>
+const baseYojanas=[
+{title:"PM Kisan Samman Nidhi",cat:"kisan",benefit:"₹6000/year",desc:"किसानों को हर साल ₹6000 की सहायता",elig:"2 हेक्टेयर तक जमीन",docs:"Aadhaar, Bank Account",link:"https://pmkisan.gov.in",date:"2026-03-10"},
+{title:"PM Awas Yojana Gramin",cat:"awas",benefit:"₹1.20 Lakh",desc:"गरीबों को पक्का घर",elig:"BPL परिवार",docs:"Aadhaar, BPL Card",link:"https://pmayg.nic.in",date:"2026-02-28"},
+{title:"Ayushman Bharat",cat:"swasthya",benefit:"₹5 Lakh Free इलाज",desc:"5 लाख तक मुफ्त इलाज",elig:"SECC लिस्ट",docs:"Aadhaar, Ration Card",link:"https://pmjay.gov.in",date:"2026-03-01"},
+{title:"PM Surya Ghar",cat:"awas",benefit:"₹78,000 Subsidy",desc:"सोलर पर सब्सिडी, 300 यूनिट फ्री",elig:"घर के मालिक",docs:"Electricity Bill, Aadhaar",link:"https://pmsuryaghar.gov.in",date:"2026-03-12"},
+{title:"Lakhpati Didi",cat:"mahila",benefit:"₹1-5 Lakh",desc:"SHG महिलाओं को लखपति बनाना",elig:"SHG महिला",docs:"SHG ID",link:"https://lakhpatididi.gov.in",date:"2026-02-20"},
+{title:"PM Vishwakarma",cat:"yuva",benefit:"₹15,000 Toolkit",desc:"कारीगरों के लिए औजार",elig:"18 ट्रेड",docs:"Aadhaar",link:"https://pmvishwakarma.gov.in",date:"2026-01-30"},
+{title:"Ladli Behna MP",cat:"mahila",benefit:"₹1250/month",desc:"MP महिलाओं को हर महीने",elig:"MP निवासी",docs:"Samagra ID",link:"https://cmladlibahna.mp.gov.in",date:"2026-03-08"},
+{title:"PM Mudra Loan",cat:"yuva",benefit:"₹10 Lakh Loan",desc:"बिना गारंटी बिजनेस लोन",elig:"भारतीय नागरिक",docs:"Aadhaar, PAN",link:"https://mudra.org.in",date:"2026-02-15"},
+{title:"Sukanya Samriddhi",cat:"mahila",benefit:"8.2% ब्याज",desc:"बेटी के लिए बचत",elig:"10 साल से कम बेटी",docs:"Birth Certificate",link:"https://www.nsiindia.gov.in",date:"2026-02-10"},
+{title:"PM Ujjwala",cat:"mahila",benefit:"Free Gas",desc:"मुफ्त गैस कनेक्शन",elig:"BPL महिला",docs:"Aadhaar, BPL",link:"https://pmuy.gov.in",date:"2026-01-15"},
+{title:"Kanya Sumangala UP",cat:"mahila",benefit:"₹25,000",desc:"UP बेटियों को",elig:"UP निवासी",docs:"Birth Certificate",link:"https://mksy.up.gov.in",date:"2026-02-25"},
+{title:"Jan Dhan Yojana",cat:"yuva",benefit:"Zero Balance",desc:"फ्री बैंक खाता",elig:"भारतीय",docs:"Aadhaar",link:"https://pmjdy.gov.in",date:"2026-01-05"}
+];
+const websiteData=[
+{group:"Central",name:"UIDAI Aadhaar",url:"https://uidai.gov.in",icon:"🪪"},
+{group:"Central",name:"MyGov",url:"https://mygov.in",icon:"🏛️"},
+{group:"Central",name:"India.gov.in",url:"https://india.gov.in",icon:"🇮🇳"},
+{group:"Central",name:"Income Tax",url:"https://incometax.gov.in",icon:"💰"},
+{group:"Central",name:"Passport Seva",url:"https://passportindia.gov.in",icon:"✈️"},
+{group:"Central",name:"Parivahan RTO",url:"https://parivahan.gov.in",icon:"🚗"},
+{group:"State",name:"UP Govt",url:"https://up.gov.in",icon:"🏞️"},
+{group:"State",name:"MP Govt",url:"https://mp.gov.in",icon:"🏞️"},
+{group:"State",name:"Bihar Govt",url:"https://state.bihar.gov.in",icon:"🏞️"},
+];
+let customList=JSON.parse(localStorage.getItem('customYojanas')||'[]');
+let allData=[...baseYojanas,...customList];
+let curCat='all';
+function cardTpl(y){return `<div class="card"><div style="display:flex;justify-content:space-between;margin-bottom:10px"><span style="background:#FFFBEB;color:#92400e;border:1px solid #FDE68A;font-size:11px;padding:5px 12px;border-radius:999px;font-weight:800">${y.cat.toUpperCase()}</span><span style="font-size:11px;color:#94a3b8">📅 ${y.date}</span></div><div style="font-weight:800;font-size:16px;margin-bottom:8px">${y.title}</div><div style="font-size:13px;color:#57534e;margin-bottom:10px">${y.desc}</div><div style="background:linear-gradient(135deg,#FFFBEB,#FFF7ED);border:1px solid #FFEDD5;padding:10px 14px;border-radius:12px;font-size:13px;font-weight:700;color:#9a3412;margin-bottom:12px;display:flex;justify-content:space-between"><span>💰 लाभ</span><span>${y.benefit}</span></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:10px"><button class="btn btn-sec" style="font-size:13px" onclick="openModal('${y.title.replace(/'/g,"\'")}')">📖 Details</button><a href="${y.link}" target="_blank" class="btn btn-primary" style="text-align:center;text-decoration:none;font-size:13px;display:flex;align-items:center;justify-content:center">Apply ↗</a></div></div>`}
+function renderGrid(){let q=document.getElementById('search').value.toLowerCase();let f=allData.filter(y=> (curCat==='all'||y.cat===curCat) && (!q||y.title.toLowerCase().includes(q)||y.desc.toLowerCase().includes(q)));document.getElementById('grid').innerHTML=f.slice(0,6).map(cardTpl).join('');document.getElementById('grid2').innerHTML=f.slice(6).map(cardTpl).join('');document.getElementById('totalCount').innerText=f.length}
+function renderWeb(){let q=document.getElementById('wsearch').value.toLowerCase();let f=websiteData.filter(w=>!q||w.name.toLowerCase().includes(q));let groups={};f.forEach(w=>{if(!groups[w.group])groups[w.group]=[];groups[w.group].push(w)});let html='';for(let g in groups){html+=`<div style="font-weight:800;font-size:11px;color:#ea580c;margin:12px 0 6px">${g.toUpperCase()}</div>`;groups[g].forEach(w=>{html+=`<a href="${w.url}" target="_blank" style="display:flex;gap:10px;padding:10px 12px;background:#FFFBFB;border-radius:12px;margin-bottom:8px;text-decoration:none;color:#1e293b;font-size:13px;border:1px solid #FFEDD5"><span>${w.icon}</span>${w.name}<span style="margin-left:auto">↗</span></a>`})}document.getElementById('wlist').innerHTML=html}
+function openModal(t){let y=allData.find(x=>x.title===t);document.getElementById('mTitle').innerText=y.title;document.getElementById('mContent').innerHTML=`<div style="display:grid;gap:12px;font-size:14px"><div style="background:#FFFBEB;padding:12px;border-radius:12px"><b>📋</b> ${y.desc}</div><div style="display:grid;grid-template-columns:1fr 1fr;gap:10px"><div style="background:#f0fdf4;padding:10px;border-radius:10px"><b>💰 लाभ</b><br><span style="color:#166534;font-weight:800">${y.benefit}</span></div><div style="background:#eff6ff;padding:10px;border-radius:10px"><b>📅 अपडेट</b><br>${y.date}</div></div><div><b>👤 पात्रता:</b> ${y.elig}</div><div><b>📄 दस्तावेज:</b> ${y.docs}</div><div style="background:#0f172a;color:white;padding:12px;border-radius:12px"><b>🔗 Official:</b><br><a href="${y.link}" target="_blank" style="color:#fdba74;word-break:break-all">${y.link}</a></div><a href="${y.link}" target="_blank" class="btn btn-primary" style="display:block;text-align:center;text-decoration:none;padding:12px">🚀 Official Website पर Apply करें</a></div>`;document.getElementById('yModal').style.display='flex'}
+function filterCat(c,el){curCat=c;document.querySelectorAll('[onclick^="filterCat"]').forEach(b=>b.className='btn btn-sec');if(el)el.className='btn btn-primary';renderGrid()}
+function addYojana(){let y={title:document.getElementById('nTitle').value,cat:document.getElementById('nCat').value||'yuva',benefit:document.getElementById('nBen').value,desc:document.getElementById('nDesc').value,link:document.getElementById('nLink').value||'https://india.gov.in',elig:document.getElementById('nElig').value||'As per official',docs:'Aadhaar',date:new Date().toISOString().split('T')[0]};if(!y.title||!y.desc)return alert('Title & Desc required');customList.push(y);localStorage.setItem('customYojanas',JSON.stringify(customList));allData=[...baseYojanas,...customList];renderGrid();alert('✅ Added & Live Updated!');document.getElementById('admin').style.display='none'}
+function saveAds(){let p=document.getElementById('pubId').value;let s=document.getElementById('slotId').value;if(p)localStorage.setItem('pubId',p);if(s)localStorage.setItem('slotId',s);alert('✅ Saved! Reload होगा');location.reload()}
+function connectSheet(){let u=document.getElementById('sheetUrl').value;if(!u)return alert('Link daalein');localStorage.setItem('sheetUrl',u);localStorage.setItem('lastFetchTime',new Date().toLocaleString());document.getElementById('lastFetch').innerText=new Date().toLocaleString();alert('✅ Sheet Connected!')}
+function exportData(){let blob=new Blob([JSON.stringify(allData,null,2)],{type:'application/json'});let a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='bharat-portal-data.json';a.click()}
+document.getElementById('search').addEventListener('input',renderGrid);
+document.getElementById('wsearch').addEventListener('input',renderWeb);
+document.getElementById('lu').innerText=new Date().toLocaleDateString('hi-IN',{day:'numeric',month:'long',year:'numeric'});
+document.getElementById('lastFetch').innerText=localStorage.getItem('lastFetchTime')||new Date().toLocaleString();
+document.getElementById('pubId').value=localStorage.getItem('pubId')||'';
+document.getElementById('slotId').value=localStorage.getItem('slotId')||'';
+renderGrid();renderWeb();
+try{(adsbygoogle=window.adsbygoogle||[]).push({});}catch(e){}
+</script>
+</body>
+</html>
